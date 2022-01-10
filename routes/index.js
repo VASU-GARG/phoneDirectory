@@ -22,7 +22,7 @@ router.get('/see' ,function(req,res){
   getAllRecords.exec(function(err,data){
     if(err) throw err;
     if(data.length == 0){
-      res.render('seeAll', {message:"No contact founds"});
+      res.render('seeAll', {message:"No contact found"});
     }
     else{
       res.render('seeAll', {allContacts:data})
