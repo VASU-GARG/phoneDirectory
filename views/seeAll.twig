@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CONTACT LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <div class="see-all-contact-page">
+
+      <form class="search-contact" method="POST" action="/searchContact">
+          <div class="mb-3 name">
+              <input type="name" class="form-control" id="name" placeholder="enter a name" name="nameEntered">
+          </div>
+          <div class="btn-search">
+          <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+      </form>
+
+
+      <div class="contact-list-head">
+      <h1> YOUR CONTACT LIST </h1>
+      </div>
+
+      <div class="all-contacts">
+
+          <table class="contact-table">
+                <thead>
+                  <tr>
+                    <th class="col1">NAME</th>
+                    <th class="col2">PHONE NUMBER</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for item in allContacts %}
+                    {% if item != ""  %}
+                      <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.phoneNumber}}</td>
+                      </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+          </table>
+          <br><br>
+          <h4 class="no-contact-found">{{message}}</h4>
+      </div>
+    </div>
+  </body>
+  <button onclick="javascript:window:location.href='/'" class="btn btn-secondary back-home-button">HOME</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</html>
+

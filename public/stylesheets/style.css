@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+.name{
+  width: 250px;
+  margin-bottom: 15%;
+}
+
+.phn{
+  width: 250px;
+}
+
+.name-phn{
+  margin-top: 5%;
+}
+
+
+.back-home-button{
+  padding: 10px;
+  position: absolute;
+  top: 7%;
+  right: 5%;
+}
+
+.home-page-btn{
+  margin: 20px;
+}
+
+.home-page{
+  text-align: center;
+}
+
+.contact-list-head{
+  margin-top: 100px;
+}
+
+
+.all-contacts{
+  padding: 20px;
+  background-color: rgb(195, 223, 186);
+  width: 500px;
+  height: 350px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+
+.contact-table{
+  width: 100%;
+  border: 3px solid black;
+  border-collapse: collapse;
+
+}
+
+
+td, th{
+  border: 2px solid black;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+th{
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+
+.see-all-contact-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-new-contact-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-message-div{
+  width: 100%;
+  margin-top: 50px;
+  border-color: greenyellow;
+  border-radius: 10px;
+  text-align: center;
+  background-color: greenyellow;
+}
+
+.no-contact-found{
+  text-align: center;
+}
